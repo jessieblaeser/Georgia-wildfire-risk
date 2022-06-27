@@ -192,13 +192,16 @@ map2.on("load", function () {
      // Create the popup
 map2.on('click', 'drought', function (e) {
   var droughtRank =  e.features[0].properties['DM'];
+  var explanation = droughtSeverity(e.features[0].properties['DM']);
+
 
   
   droughtRank = droughtRank;
+  explanation = explanation
   
   new mapboxgl.Popup()
       .setLngLat(e.lngLat)
-      .setHTML('<h2>'+droughtRank+'</h2>')
+      .setHTML('<h4>'+explanation+'</h4>')
       .addTo(map2);
 });
 // Change the cursor to a pointer when the mouse is over the us_states_elections layer.
@@ -210,3 +213,21 @@ map2.on('mouseleave', 'drought', function () {
   map2.getCanvas().style.cursor = '';
 });
 })
+
+function droughtSeverity(d) {
+  if (d == 0) {
+      return "Abnormally dry "
+  }
+  else if (d == 1) {
+    return "Moderate drought"
+ }
+ else if (d == 2) {
+  return "Severe drought"
+}
+else if (d == 3) {
+  return "Extreme drought"
+}
+else if (d == 4) {
+  return "Exceptional drought"
+}
+  }
