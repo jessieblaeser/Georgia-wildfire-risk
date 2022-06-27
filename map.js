@@ -1,7 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiamJsYWVzZXIiLCJhIjoiY2t4OGVtY3FmMTh6YTJ4cXU1NWY5aXUxMiJ9.DJNRPOrzDpL4YDzTQXxaCQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/jblaeser/cl4lqdgsm000j14m1qtpzum5d',
+    style: 'mapbox://styles/jblaeser/cl4x47vue001x14jqptmrrsd8',
+    projection: 'mercator',
     zoom: 5,
     maxZoom: 9,
     minZoom: 3,
@@ -82,6 +83,23 @@ map.on("load", function () {
   
         },
       }, "waterway-label");
+
+      map.addLayer({
+        id: "gaOutline",
+        type: "line",
+        source: {
+          type: "geojson",
+          data: "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/GA.geo.json",
+        },
+        maxzoom: 6,
+        paint: {
+          "line-color": "#a9a9a9",
+          "line-width": 1,
+          
+       
+  
+        },
+      }, "waterway-label");
      
 
   });
@@ -120,7 +138,8 @@ map.on('mouseleave', 'meanWHP', function () {
 mapboxgl.accessToken = 'pk.eyJ1IjoiamJsYWVzZXIiLCJhIjoiY2t4OGVtY3FmMTh6YTJ4cXU1NWY5aXUxMiJ9.DJNRPOrzDpL4YDzTQXxaCQ';
 var map2 = new mapboxgl.Map({
   container: 'map2',
-    style: 'mapbox://styles/jblaeser/cl4lqdgsm000j14m1qtpzum5d',
+    style: 'mapbox://styles/jblaeser/cl4w7d6q4004a15pyhcrwbnx5',
+    projection: 'mercator',
     zoom: 5,
     maxZoom: 9,
     minZoom: 3,
@@ -188,6 +207,23 @@ map2.on("load", function () {
       },
       "waterway-label"
     );
+
+    map2.addLayer({
+      id: "gaOutline",
+      type: "line",
+      source: {
+        type: "geojson",
+        data: "https://raw.githubusercontent.com/johan/world.geo.json/master/countries/USA/GA.geo.json",
+      },
+      maxzoom: 6,
+      paint: {
+        "line-color": "#000000",
+        "line-width": 1,
+        
+     
+
+      },
+    }, "waterway-label");
 
      // Create the popup
 map2.on('click', 'drought', function (e) {
