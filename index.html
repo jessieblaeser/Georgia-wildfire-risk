@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Hazard Potential</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Coastal communities in Georgia face greatest wildfire risk</h1>
+        <h3>St. Catherine's Island wildfire brings increased scrutiny on wildfire hazard potential</h3>
+    </div>
+    <hr>    
+
+    <div class="section">
+        <p><em>By Jessie Blaeser</em></p>
+        <p><em>June 27, 2022</em></p>
+        <br>
+        <p>Out of all natural disasters common in Georgia, wildfires do not typically top the list of concerns. But as a wildfire rages across St. Catherine’s Island along the state’s coast, concern for the preservation of some of Georgia’s most ecologically-diverse land grows. </p>
+        <p>Georgia’s coastal communities are at a greater risk than the rest of the state when it comes to wildfire hazard potential, according to <a href="https://wildfirerisk.org/">data</a> from the U.S. Department of Agriculture and U.S. Forestry Service.</p>
+        <p>Click on the map below to inspect each county’s mean wildfire hazard potential, as well as their percentile rank within the state of Georgia.</p>
+        <h2>Coastal communities and conservation lands in Georgia face greatest wildfire hazard potential</h2>
+        <h3>Mean wildfire hazard potential by county, overlaid with areas under enviornmental conservation in the state</h3>       
+
+            <div id='map'>
+                
+                <div id='title' class="title">
+                    <div id="pctChange" class="legend">
+                        <h4>Mean wildfire hazard potential by county</h4>
+                        <div><p><span style="background-color: #ffffcc"></span><span style="background-color: #ffeda0"></span><span style="background-color: #fed976"></span><span style="background-color: #feb24c"></span><span style="background-color: #fd8d3c"></span><span style="background-color: #fc4e2a"></span><span style="background-color: #e31a1c"></span><span style="background-color: #b10026"></span></p></div>
+                    </div>
+                    
+               
+
+                </div>
+              
+            </div>
+            
+            
+            <h2>Coast communities currently experiencing worst drought conditions in the state</h2>
+            <h3>Drought conditions nationwide as of June 27, 2022</h3>
+            <div id='map2'>
+                <div id='title' class="title">
+                    <div id="pctChange" class="legend">
+                        <h4>Drought severity</h4>
+                        <div><p><span style="background-color: #ffffcc"></span><span style="background-color: #ffffd4"></span><span style="background-color: #fed98e"></span><span style="background-color: #fe9929"></span><span style="background-color: #d95f0e"></span><span style="background-color: #993404"></span></p></div>
+                  
+           
+            </div>
+            <!-- <p>DATA SOURCE: <a href="https://stats.oecd.org/Index.aspx?DataSetCode=EXP_PM2_5#">OCED</a>, which notes concentration estimates are population-weighted. </p> -->
+    </div>
+            </div>
+
+    <hr>
+    
+
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>
