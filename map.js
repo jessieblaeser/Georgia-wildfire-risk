@@ -54,7 +54,7 @@ map.on("load", function () {
               1051.75,
               "#b10026",
               1202,
-              "#ffffff"],
+              "#800026"],
           
            "fill-outline-color": "#ffffff",
             
